@@ -70,7 +70,7 @@ public class ApatiteControler extends JavaPlugin implements Listener, CommandExe
 
     @Override
     public void onEnable() {
-        _log.info("["+this.getName()+"] enabled!"); //вывод произвольного текста в консоль сервера
+        _log.info("["+this.getName()+"] enabled!"); //ГўГ»ГўГ®Г¤ ГЇГ°Г®ГЁГ§ГўГ®Г«ГјГ­Г®ГЈГ® ГІГҐГЄГ±ГІГ  Гў ГЄГ®Г­Г±Г®Г«Гј Г±ГҐГ°ГўГҐГ°Г 
         ApatiteUpdater ua = new ApatiteUpdater(this.getName(), version, new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().getFile()).getAbsolutePath());
         ua.update();
         if(ua.isUpdated){
@@ -110,12 +110,12 @@ public class ApatiteControler extends JavaPlugin implements Listener, CommandExe
     public void onDisable() {
         if(!safeMode){
         if (config.getBoolean("enable_reload_countdown")) {
-            Bukkit.broadcastMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "[ApatiteControler] Перезагрузка сервера через 3 секунды");
+            Bukkit.broadcastMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "[Server] ГЏГҐГ°ГҐГ§Г ГЈГ°ГіГ§ГЄГ  Г±ГҐГ°ГўГҐГ°Г  Г·ГҐГ°ГҐГ§ 3 Г±ГҐГЄГіГ­Г¤Г»");
             try {
                 Thread.sleep(1000);
-                Bukkit.broadcastMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "[ApatiteControler] ..2");
+                Bukkit.broadcastMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "[Server] ..2");
                 Thread.sleep(1000);
-                Bukkit.broadcastMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "[ApatiteControler] ..1");
+                Bukkit.broadcastMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "[Server] ..1");
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
             }
@@ -132,7 +132,7 @@ public class ApatiteControler extends JavaPlugin implements Listener, CommandExe
         int i;
         Player pl = (Player) arg0;
         
-        pl.sendMessage(ChatColor.RED+"Список загруженных миров");
+        pl.sendMessage(ChatColor.RED+"Г‘ГЇГЁГ±Г®ГЄ Г§Г ГЈГ°ГіГ¦ГҐГ­Г­Г»Гµ Г¬ГЁГ°Г®Гў");
         pl.sendMessage(ChatColor.RED+"========================");
         
         Set iter = worlds.keySet();
